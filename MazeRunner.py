@@ -5,7 +5,7 @@
 #
 #****************************************************************
 from csv import reader
-class MazerRunner:
+class MazeRunner:
    """
    fields:
       currX - current X coorindate
@@ -105,12 +105,14 @@ class MazerRunner:
    #
    def moveUp(self):
       self.moveVertical(-1)
+      print(self)
       
    ###########################################################
    # move down by one step
    #
    def moveDown(self):
       self.moveVertical(1)
+      print(self)
 
    ###########################################################
    # indicates whether this MazerRunner instance can move left
@@ -161,13 +163,15 @@ class MazerRunner:
    #
    def moveLeft(self):
       self.moveHorizontal(-1)
+      print(self)
 
    ###########################################################
    # move right by one step
    #
    def moveRight(self):
       self.moveHorizontal(1)
+      print(self)
    
 if __name__ == '__main__':
-   tr = MazerRunner("maze1505369241.7894154.csv")
+   tr = MazeRunner("maze1505369241.7894154.csv")
    
